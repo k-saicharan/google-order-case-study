@@ -866,19 +866,12 @@
 
     /* ── COLLAPSIBLE STATES (PROGRESSIVE DISCLOSURE) ── */
     .layer-collapsible, .lever-collapsible {
-      display: grid;
-      grid-template-rows: 0fr;
       overflow: hidden;
-      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .layer-panel.expanded .layer-collapsible,
-    .lever-card.expanded .lever-collapsible {
-      grid-template-rows: 1fr;
+      height: 0;
+      transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .layer-collapsible-content, .lever-collapsible-content {
-      min-height: 0;
       opacity: 0;
       transform: translateY(8px);
       transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1546,42 +1539,53 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Handle toggle buttons for progressive disclosure
-    const toggleBtns = document.querySelectorAll('.toggle-btn');
-    
-    toggleBtns.forEach(btn => {
+
+    function getCollapsible(container) {
+      return container.querySelector('.layer-collapsible') || container.querySelector('.lever-collapsible');
+    }
+
+    function collapseContainer(container) {
+      container.classList.remove('expanded');
+      const c = getCollapsible(container);
+      if (c) c.style.height = '0px';
+      const btn = container.querySelector('.toggle-btn');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        const t = btn.querySelector('.btn-text');
+        if (t) t.innerHTML = btn.getAttribute('data-collapsed');
+      }
+    }
+
+    function expandContainer(container) {
+      container.classList.add('expanded');
+      const c = getCollapsible(container);
+      if (c) c.style.height = c.scrollHeight + 'px';
+      const btn = container.querySelector('.toggle-btn');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'true');
+        const t = btn.querySelector('.btn-text');
+        if (t) t.innerHTML = btn.getAttribute('data-expanded');
+      }
+    }
+
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const container = btn.closest('.layer-panel') || btn.closest('.lever-card');
         if (!container) return;
-        
+
         const isLayer = container.classList.contains('layer-panel');
         const isExpanded = container.classList.contains('expanded');
-        
-        // Accordion behavior for layer panels (only one can be open at a time)
+
         if (isLayer && !isExpanded) {
-          document.querySelectorAll('.layer-panel.expanded').forEach(otherPanel => {
-            if (otherPanel !== container) {
-              otherPanel.classList.remove('expanded');
-              const otherBtn = otherPanel.querySelector('.toggle-btn');
-              if (otherBtn) {
-                otherBtn.setAttribute('aria-expanded', 'false');
-                const otherText = otherBtn.querySelector('.btn-text');
-                if (otherText) {
-                  otherText.innerHTML = otherBtn.getAttribute('data-collapsed');
-                }
-              }
-            }
+          document.querySelectorAll('.layer-panel.expanded').forEach(other => {
+            if (other !== container) collapseContainer(other);
           });
         }
-        
-        // Toggle current container state
-        const newExpanded = container.classList.toggle('expanded');
-        btn.setAttribute('aria-expanded', newExpanded ? 'true' : 'false');
-        
-        // Update button text label
-        const btnText = btn.querySelector('.btn-text');
-        if (btnText) {
-          btnText.innerHTML = newExpanded ? btn.getAttribute('data-expanded') : btn.getAttribute('data-collapsed');
+
+        if (isExpanded) {
+          collapseContainer(container);
+        } else {
+          expandContainer(container);
         }
       });
     });
