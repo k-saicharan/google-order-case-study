@@ -454,6 +454,108 @@
       color: var(--ink-2);
     }
 
+    /* ── THE TALLY ── */
+    .ledger-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 40px 44px;
+      margin-top: 8px;
+      box-shadow: 0 4px 12px rgba(30, 31, 34, 0.02);
+    }
+
+    .tally-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tally-unit { position: relative; width: 16px; height: 72px; flex-shrink: 0; }
+    .tally-stroke {
+      position: absolute;
+      left: 6px; top: 0;
+      width: 4px; height: 100%;
+      background: var(--ink-2);
+      border-radius: 2px;
+      transform: rotate(-8deg);
+    }
+    .tally-unit.broken .tally-stroke { background: var(--red); opacity: 0.55; }
+    .tally-unit.broken::after {
+      content: '';
+      position: absolute;
+      left: -8px; top: 32px;
+      width: 32px; height: 4px;
+      background: var(--red);
+      border-radius: 2px;
+      transform: rotate(38deg);
+    }
+    .tally-unit.live .tally-stroke { background: var(--amber); }
+    .tally-unit.live::before {
+      content: '';
+      position: absolute;
+      left: -4px; top: -10px;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      border: 1.5px solid var(--amber);
+      animation: pulse-ripple 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+      opacity: 0.7;
+    }
+
+    .tally-caption { margin-left: 12px; }
+    .tally-caption .n {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .tally-caption .label {
+      font-size: 11.5px;
+      color: var(--ink-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    .ledger-list { display: flex; flex-direction: column; gap: 18px; }
+    .ledger-entry {
+      display: grid;
+      grid-template-columns: 96px 1fr 100px;
+      gap: 16px;
+      align-items: start;
+      font-size: 13.5px;
+    }
+    .ledger-entry .lg-date {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      color: var(--ink-3);
+      font-size: 12px;
+      padding-top: 2px;
+    }
+    .ledger-entry .lg-quote { color: var(--ink-2); line-height: 1.65; }
+    .ledger-entry .lg-quote strong { color: var(--ink); }
+    .ledger-status {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+      text-align: center;
+      height: fit-content;
+    }
+    .ledger-status.broken { background: var(--red-pale); color: var(--red); border: 1px solid rgba(136, 19, 55, 0.15); }
+    .ledger-status.live { background: var(--amber-pale); color: var(--amber); border: 1px solid rgba(178, 80, 16, 0.15); }
+
+    @media (max-width: 640px) {
+      .ledger-card { padding: 28px 22px; }
+      .ledger-entry { grid-template-columns: 1fr; gap: 6px; }
+      .ledger-status { width: fit-content; }
+    }
+
     /* ── TIMELINE ── */
     .timeline { position: relative; }
 
@@ -976,6 +1078,7 @@
     <div class="nav-inner">
       <a href="#order">The Order</a>
       <a href="#timeline">Timeline</a>
+      <a href="#ledger">The Tally</a>
       <a href="#layers">Six Layers</a>
       <a href="#levers">Failure Levers</a>
       <a href="#pattern">The Pattern</a>
@@ -1162,6 +1265,78 @@
         </div>
       </div>
 
+      <div class="timeline-item">
+        <div class="timeline-date">30 Jun</div>
+        <div class="timeline-content-wrap">
+          <div class="timeline-line-col">
+            <div class="timeline-dot neutral"></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div class="timeline-content">
+            <strong>Fourth Order Management contact (a supervisor), and a new channel opened on X in parallel.</strong>
+            <span>A supervisor replies on the email thread with no dispatch date and no reference to the RMA in question. Separately, the case is posted publicly on X tagging Google's support handle; the handle asks for the case ID via DM, receives it, and replies with the same escalation language: "up to 24&ndash;48 hrs before they reply."</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">1 Jul</div>
+        <div class="timeline-content-wrap">
+          <div class="timeline-line-col">
+            <div class="timeline-dot warn"></div>
+          </div>
+          <div class="timeline-content">
+            <strong>Day 22. The X channel resolves to the same queue, not a new one.</strong>
+            <span>Google's DM reply states future contact will arrive by email against the case ID provided, which was the <em>original</em> 9 June case number, not the active thread from 26 June. X reached a human faster (about 15 minutes) but produces the identical shape: escalate, 24&ndash;48 hours, wait.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE TALLY -->
+  <section id="ledger">
+    <p class="section-eyebrow">The Pattern, Counted</p>
+    <h2>Every time they said "24&ndash;48 hours"</h2>
+    <p class="section-lead">Four separate contacts, across two channels (email and X), gave an explicit turnaround window rather than a vague "we'll follow up." Three have already run past their own stated window. The fourth opened today and is still inside it.</p>
+
+    <div class="ledger-card">
+      <div class="tally-row">
+        <div class="tally-unit broken"><div class="tally-stroke"></div></div>
+        <div class="tally-unit broken"><div class="tally-stroke"></div></div>
+        <div class="tally-unit broken"><div class="tally-stroke"></div></div>
+        <div class="tally-unit live"><div class="tally-stroke"></div></div>
+        <div class="tally-caption">
+          <span class="n">4</span>
+          <div class="label">windows invoked · 3 broken · 1 still holding</div>
+        </div>
+      </div>
+
+      <div class="ledger-list">
+        <div class="ledger-entry">
+          <div class="lg-date">16 Jun</div>
+          <div class="lg-quote"><strong>Joanne, email</strong> (case 2&#8209;6444000041410): "we expect to receive further information and will provide you with an update within <strong>the next 24 hours</strong>."</div>
+          <div class="ledger-status broken">Broken</div>
+        </div>
+        <div class="ledger-entry">
+          <div class="lg-date">26 Jun, 17:51</div>
+          <div class="lg-quote"><strong>Jen, email</strong> (case 7&#8209;9313000041414): "we will provide you with an update within the next <strong>24 to 48 hours</strong>."</div>
+          <div class="ledger-status broken">Broken</div>
+        </div>
+        <div class="ledger-entry">
+          <div class="lg-date">26 Jun, 19:15</div>
+          <div class="lg-quote"><strong>Jen, email</strong> (same case): "please expect a callback from our local support team within <strong>24&ndash;48 hours</strong>." Callback never came.</div>
+          <div class="ledger-status broken">Broken</div>
+        </div>
+        <div class="ledger-entry">
+          <div class="lg-date">30 Jun</div>
+          <div class="lg-quote"><strong>Alex, X DM</strong> (@madebygoogle): "we've escalated your case to a team that handles escalations... it can take up to <strong>24&ndash;48 hrs</strong> before they reply."</div>
+          <div class="ledger-status live">Still holding</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-3); line-height: 1.7;">These are only the contacts with a stated number attached. Six other replies (17, 19, 20, 22, 25, 30 June) promised a follow-up with no window at all: "monitoring," "as soon as we have more details," "we'll follow up." Vaguer, not better.</p>
     </div>
   </section>
 
