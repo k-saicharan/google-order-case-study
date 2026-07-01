@@ -100,4 +100,15 @@
 
 ---
 
+## 2026-07-01: Tally mark iteration — from colored ring to monochrome pencil strokes
+
+- Sai kept pushing back on the same complaint across several rounds: the live ("still holding") mark looked disproportionately big next to the three broken marks. First fix attempt shrank the pulse ring's decoration (24px ring to a small dot). Wrong target: Sai clarified he meant revert that redesign and just decrease the size of the existing ring, not restructure it into a dot-plus-ring.
+- Reverted to the original single-ring structure at a smaller diameter (24px to 12px). Still wrong, per the next screenshot Sai sent: the actual stroke itself (not the ring) read as bigger than the broken strokes.
+- Root cause, finally isolated by re-reading the CSS directly rather than the rendered pixels: the broken and live strokes had identical width and height the entire time. The live one only *looked* bigger because it was full-opacity solid amber against the broken strokes' faded 55%-opacity pink; color contrast was being misread as size. Fixed by making it an actual dimensional change (shorter height, thinner width), not another color or ring adjustment.
+- Final instruction: don't stop at the 4th mark, resize and restyle all four, and switch the whole thing to a simple black pencil/sketch stroke, same color on both the struck and unstruck marks. Rebuilt the tally as four uniform thin black strokes (2px, ~48px tall); removed the red/amber color coding, the pulse ring, and the opacity fade entirely. The only remaining difference between "broken" and "still holding" is the diagonal strike itself, which is how tally marks actually work.
+- Three commits: `e58ac62` (revert to single ring, smaller), `d22c118` (real dimensional shrink), `526d4dc` (full monochrome pencil redesign). Verified each round in-browser via a local static server before pushing.
+- Saved a standing lesson from this: when a visual "size" complaint doesn't resolve after a dimension fix, check color/opacity contrast before re-adjusting dimensions again; a bold, saturated element reads as bigger than an identically-sized faded one.
+
+---
+
 _Next entry: add when case status changes: Google responds, replacement dispatched, Klarna dispute opens, email verification result confirmed, the drafted Ana Corrales email or X post actually sends, or case closes._
