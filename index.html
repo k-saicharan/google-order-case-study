@@ -496,8 +496,16 @@
     .tally-unit.live::before {
       content: '';
       position: absolute;
-      left: -4px; top: -10px;
-      width: 24px; height: 24px;
+      left: 4px; top: -3px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+    .tally-unit.live::after {
+      content: '';
+      position: absolute;
+      left: 1px; top: -6px;
+      width: 14px; height: 14px;
       border-radius: 50%;
       border: 1.5px solid var(--amber);
       animation: pulse-ripple 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
@@ -1156,7 +1164,7 @@
       </div>
     </div>
 
-    <p style="margin-top: 20px; font-size: 14px; color: var(--ink-3); line-height: 1.7;">The contrast between these two items: same order, same agent, same call; is diagnostic. The Fitbit never left the same representative's desk. The Pixel was immediately escalated upward to a specialist team that then produced nothing visible for 21 days. That gap is the central finding of this analysis.</p>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--ink-3); line-height: 1.7;">Same order, same agent, same call. The Fitbit got fixed on the spot because the first person who picked up the phone had the authority to fix it. The Pixel got pushed up to a specialist team that then produced nothing visible for 21 days. That gap is the central finding of this analysis.</p>
   </section>
 
   <!-- TIMELINE -->
@@ -1336,7 +1344,7 @@
         </div>
       </div>
 
-      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-3); line-height: 1.7;">These are only the contacts with a stated number attached. Six other replies (17, 19, 20, 22, 25, 30 June) promised a follow-up with no window at all: "monitoring," "as soon as we have more details," "we'll follow up." Vaguer, not better.</p>
+      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-3); line-height: 1.7;">These are only the contacts with a stated number attached. Six other replies (17, 19, 20, 22, 25, 30 June) promised a follow-up with no window at all: "monitoring," "as soon as we have more details," "we'll follow up." Just vaguer.</p>
     </div>
   </section>
 
@@ -1361,7 +1369,7 @@
   <section id="layers">
     <p class="section-eyebrow">Six System Layers</p>
     <h2>What each system saw, and what it couldn't.</h2>
-    <p class="section-lead">Each layer performed within its own boundary. The failure is not in any one system. It is in what they collectively do not do: communicate across boundaries, escalate with urgency that grows over time, and surface the person holding the whole picture together at the centre.</p>
+    <p class="section-lead">Each layer performed within its own boundary. No single system here is broken. What's missing is what none of them do: communicate across boundaries, escalate with urgency that grows over time, and surface the person holding the whole picture together at the centre.</p>
 
     <!-- Layer 1 -->
     <div class="layer-panel layer-1">
@@ -1380,7 +1388,7 @@
           </div>
           <div class="layer-body">
             <p>Google's dispatch email named <strong>DPD</strong> as the carrier. The Pixel was physically handled by <strong>DHL</strong>. The customer was never told.</p>
-            <p>This is not a clerical error. DPD publishes documented service restrictions for Northern Ireland; several DPD service tiers are explicitly unavailable to NI addresses. When the fulfilment system processed an NI destination, it rerouted to DHL. This rerouting is almost certainly automated: a postcode-triggered rule in carrier selection logic.</p>
+            <p>DPD publishes documented service restrictions for Northern Ireland: several DPD service tiers are explicitly unavailable to NI addresses. That's why the fulfilment system rerouted this order to DHL once it processed the NI destination, almost certainly a postcode-triggered rule in carrier selection logic, not a clerical mistake.</p>
             <p>What does not exist (confirmed by research) is any mention of this carrier switch in Google Store's published delivery documentation. The customer had no way to know it happened. Critically, neither did the first-contact Order Management representative, who spent the entire contact searching the DPD system for a parcel that DHL was holding.</p>
             <p>Under the Windsor Framework (in force from 1 May 2025, five weeks before this order), every GB&rarr;NI parcel shipment operates under new customs data requirements that add regulatory weight to any inspection on this route. The carrier switch was the first undocumented event. The Manchester hold was the second.</p>
           </div>
@@ -1412,8 +1420,8 @@
           </div>
           <div class="layer-body">
             <p>The Pixel was flagged at Manchester on a dangerous goods hold. On the physics, this should not have happened: the battery is approximately 20Wh, a fraction of DHL's 100Wh domestic threshold. The hold came from a <strong>labelling or documentation trigger</strong>, not from the device being genuinely hazardous.</p>
-            <p>This is not the first time a Google Pixel has been held at a UK DHL depot. A documented case exists on Google's own Pixel Community support forum: a customer's Pixel sent for repair was held at the Edinburgh DHL depot, where DHL threatened to destroy the device. Same carrier. Same device category. Same DG hold pattern.</p>
-            <p>This matters because it shifts the framing. If this were an isolated incident, it would be an operational anomaly. The Edinburgh case makes it a <strong>recurring friction point</strong> between Google's use of DHL and DHL's DG screening for lithium battery devices. Google has an existing relationship with DHL; DHL handles Google's repair and return logistics. A relationship of that depth should include a resolution path for DG holds on standard consumer devices that does not require a customer to forward DHL's own tracking data back to Google's support team.</p>
+            <p>A Google Pixel has been held at a UK DHL depot before. Documented on Google's own Pixel Community support forum: a customer's Pixel sent for repair was held at the Edinburgh DHL depot, where DHL threatened to destroy the device. Same carrier. Same device category. Same DG hold pattern.</p>
+            <p>One occurrence would be an operational anomaly. Two makes it a <strong>recurring friction point</strong> between Google's use of DHL and DHL's DG screening for lithium battery devices. Google has an existing relationship with DHL; DHL handles Google's repair and return logistics. A relationship of that depth should include a resolution path for DG holds on standard consumer devices that doesn't require a customer to forward DHL's own tracking data back to Google's support team.</p>
             <p>From the depot handler's seat, they did their job: flagged, held, issued "please contact DHL," and waited for the shipper to respond. The shipper has an existing DHL account. They waited 21 days. Google did not respond via that relationship. The customer did instead.</p>
           </div>
         </div>
@@ -1444,8 +1452,8 @@
           </div>
           <div class="layer-body">
             <p>Every contact across four Order Management representatives produced the same output: "escalated to the specialist team, update in 24&ndash;48 hours." No deadline was ever met. No dispatch date was ever given. Three case numbers were opened across three contacts.</p>
-            <p>The SLA question has a concrete answer: research found no publicly documented SLA for Google Store's specialist escalation team. The 24&ndash;48 hour window agents repeat is not a contractual commitment; it is a script. There is no published accountability mechanism that would flag this case as overdue at day 3, day 7, or day 21. From the system's perspective, <strong>the case is not late. The system has no definition of late at this tier.</strong></p>
-            <p>Three separate case IDs for one unresolved order is not normal case management; it is the process signature of a system where each contact resets the thread rather than continuing it. Every new case number means a new agent inherits a case with no context from the previous contact, files a fresh escalation, and issues the same 24&ndash;48 hour commitment. The specialist team may have received the same case three times across three different IDs, or may have received it once without knowing the customer contacted again. Either way, fragmentation serves the system's inertia, not the customer's resolution.</p>
+            <p>Research found no publicly documented SLA for Google Store's specialist escalation team. The 24&ndash;48 hour window agents repeat isn't backed by any contractual commitment: it's a script, recited on day 1 and day 21 alike, because there's no accountability mechanism that would flag this case as overdue at day 3, day 7, or day 21. <strong>The system has no definition of "late" at this tier, so nothing here can be late.</strong></p>
+            <p>Three separate case IDs for one unresolved order is what it looks like when a system resets the thread on every contact instead of continuing it. Every new case number means a new agent inherits a case with no context from the previous contact, files a fresh escalation, and issues the same 24&ndash;48 hour commitment. The specialist team may have received the same case three times across three different IDs, or may have received it once without knowing the customer contacted again. Either way, the fragmentation helps the system coast; it doesn't help the customer.</p>
           </div>
         </div>
       </div>
@@ -1475,7 +1483,7 @@
           </div>
           <div class="layer-body">
             <p>The specialist team received this case (across three escalations and three case numbers) and produced no customer-facing output in 21 days. They have not appeared on any thread, have not called despite a written promise on 26 June, and have sent nothing in writing.</p>
-            <p>The absence of a published SLA means this is not a breach of a documented commitment: there is no documented commitment to breach. The team operates inside a black box with no external accountability mechanism. Cases enter. Time passes. Nothing forces them to surface.</p>
+            <p>There's no published SLA for this tier, so there's nothing on record to breach. The team operates inside a black box with no external accountability mechanism. Cases enter. Time passes. Nothing forces them to surface.</p>
             <p>The Edinburgh DHL/Pixel Community case adds relevant context: even on Google's own support forums (a space where Google employees participate) a Pixel held at a UK DHL depot for long enough that destruction was threatened required <strong>public forum pressure</strong> before the case moved. The specialist team model, wherever it applies, appears to share this characteristic: it moves when pressure reaches a channel the team cannot ignore, not when the case reaches a particular age or state.</p>
           </div>
         </div>
@@ -1506,14 +1514,14 @@
           </div>
           <div class="layer-body">
             <p>The trade-in warning fired on 19 June with the Pixel undelivered and a live support case open. Google's own published trade-in terms confirm why: the trade-in clock runs from dispatch date, with a 30-day charge trigger, and the documentation contains <strong>no provision for pausing the clock when delivery fails.</strong></p>
-            <p>This is not an oversight in one customer's case. It is an absence in the published policy. There is no documented mechanism (in Google's trade-in T&amp;Cs or support documentation) for automatically pausing trade-in deadlines when the new device is undelivered due to carrier failure. The system was not designed with this scenario in mind.</p>
+            <p>This isn't specific to one customer's case: it's missing from the published policy itself. There is no documented mechanism (in Google's trade-in T&amp;Cs or support documentation) for automatically pausing trade-in deadlines when the new device is undelivered due to carrier failure. The system was never designed with this scenario in mind.</p>
             <p>Google's own agents confirmed this in writing on 22 June: "entirely unfair for the trade-in clock to run while your new device is missing." That acknowledgement is significant not because it resolves the problem, but because it confirms <strong>the system produced an outcome its own teams recognise as wrong, and produced it anyway, because there was no mechanism to stop it.</strong> Whether that acknowledgement was ever converted into an actual billing system action remains unconfirmed.</p>
           </div>
         </div>
       </div>
       <div class="layer-finding">
         <div class="finding-label">The policy gap in one sentence</div>
-        Google's trade-in T&amp;Cs have a 30-day clock triggered by dispatch date with no conditional branch for carrier-hold, failed delivery, or open support case. The absence is structural, not incidental.
+        Google's trade-in T&amp;Cs have a 30-day clock triggered by dispatch date with no conditional branch for carrier-hold, failed delivery, or an open support case. Nobody built a branch for this scenario into the policy.
       </div>
       <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
         <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
@@ -1537,7 +1545,7 @@
           </div>
           <div class="layer-body">
             <p>Klarna's payment schedule is running independently of everything above, counting toward an 11 July instalment for a device the customer has never received. Like Google's billing system, it has no connection to the carrier status or the open support case.</p>
-            <p>One detail from Klarna's own documentation is worth noting: <strong>Pay in 3 is not regulated by the FCA.</strong> The buyer protection pause that exists (once you report a problem, we pause your payment) is a self-imposed contractual policy, not a statutory obligation. Klarna can modify or limit it unilaterally. The customer is relying on Klarna's voluntary policy, not a regulated protection.</p>
+            <p>Klarna's own documentation confirms <strong>Pay in 3 isn't regulated by the FCA.</strong> The buyer protection pause (report a problem, payment pauses) is a policy Klarna chose to offer, not a legal requirement, so they can change or limit it unilaterally. The customer is relying on Klarna's goodwill here, not a regulated protection.</p>
             <p>Two financial systems are applying payment pressure simultaneously for a device that was never delivered. Neither knows what the other is doing. Neither fires automatically when delivery fails. <strong>The customer is the only party who can see both clocks running at the same time.</strong></p>
           </div>
         </div>
@@ -1557,7 +1565,7 @@
   <section id="levers">
     <p class="section-eyebrow">Failure Levers</p>
     <h2>Five levers, ranked by impact</h2>
-    <p class="section-lead">Ranked by leverage: how much of the 21-day stall a fix would have prevented, and how structural the fix is; not by how disruptive each failure was to experience.</p>
+    <p class="section-lead">Ranked by leverage: how much of the 21-day stall a fix would have prevented, and how structural the fix is, rather than by how disruptive each failure felt in the moment.</p>
 
     <div class="lever-intro">
       Lever #1 is the root cause: fix this and most others shrink. Lever #2 is the most mechanical and testable. Lever #3 is the infrastructure underpinning both. Lever #4 is the one the customer can test themselves, right now, without any org change. Lever #5 is largely a symptom of #1.
@@ -1574,7 +1582,7 @@
         <div class="lever-title">Escalation topology is hierarchical. It should be functional.</div>
         <div class="lever-collapsible">
           <div class="lever-collapsible-content">
-            <div class="lever-evidence">When a case needs specialist input, it gets pushed <em>up and away</em> from the rep who has context ("the specialist team," invisible to the handling representative and the customer) instead of the specialist being pulled <em>into</em> the existing thread alongside the rep who already has the history. The Fitbit resolved same-call because it never left the first-contact desk. The Pixel has been with "the specialist team" since 21 June with zero visible movement. Fix this one thing and most of the other failures shrink: lost context, no written trail, slow turnaround all follow from this design. Industry-named: see PagerDuty's "Customer Service Incident Commander" model, functional vs hierarchical escalation in CX literature.</div>
+            <div class="lever-evidence">When a case needs specialist input, it gets pushed <em>up and away</em> from the rep who has context ("the specialist team," invisible to the handling representative and the customer) instead of the specialist being pulled <em>into</em> the existing thread alongside the rep who already has the history. The Fitbit resolved same-call because the first-contact rep had the authority to fix it herself. The Pixel has been with "the specialist team" since 21 June with zero visible movement. Fix this one thing and most of the other failures shrink: lost context, no written trail, slow turnaround all follow from this design. Industry-named: see PagerDuty's "Customer Service Incident Commander" model, functional vs hierarchical escalation in CX literature.</div>
           </div>
         </div>
         <div class="lever-fix">
@@ -1697,7 +1705,7 @@
       <h3>This is a system-design finding, not a service complaint.</h3>
       <p>The carrier flagged and waited. Order Management escalated and waited. The specialist team received and produced nothing. Billing ran its timer. Klarna ran its schedule. The fulfilment system switched carriers without telling anyone. <strong>Each system was operating as designed.</strong></p>
       <p>The Edinburgh Pixel case, the absence of a specialist team SLA, the undocumented carrier switch, the trade-in policy with no delivery-failure provision; none of these are features of this specific order. They are features of the system. This case is one instance of a set of failure conditions that exist independently of the order number.</p>
-      <p>The customer in this case is not unlucky. They are experiencing the designed outputs of a system that was not designed for this scenario, and has not been updated despite evidence that the scenario recurs.</p>
+      <p>Bad luck didn't cause this. This system was never built to handle this scenario, and hasn't been fixed despite evidence it keeps recurring.</p>
       <p><strong>That is the finding this analysis exists to make explicit.</strong></p>
     </div>
   </section>
