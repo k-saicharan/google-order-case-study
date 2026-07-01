@@ -492,11 +492,12 @@
       border-radius: 2px;
       transform: rotate(38deg);
     }
-    .tally-unit.live .tally-stroke { background: var(--amber); }
+    .tally-unit.live { height: 56px; }
+    .tally-unit.live .tally-stroke { width: 3px; background: var(--amber); }
     .tally-unit.live::before {
       content: '';
       position: absolute;
-      left: 2px; top: -4px;
+      left: 1.5px; top: -4px;
       width: 12px; height: 12px;
       border-radius: 50%;
       border: 1.5px solid var(--amber);
