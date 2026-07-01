@@ -89,4 +89,15 @@
 
 ---
 
+---
+
+## 2026-07-01: Voice pass + tally proportion fix
+
+- Sai read the live page and flagged two things: the tally's live (unstruck) mark looked disproportionately large next to the broken ones, and several sentences read as AI-written, specifically the "X, not Y" antithesis construction ("the absence is structural, not incidental") and an unclear metaphor ("the Fitbit never left the representative's desk").
+- Fixed the tally CSS: the live mark's pulse ring was 24px against a 4px stroke; replaced with an 8px dot and a proportional 14px ring so all four marks read at the same visual weight.
+- Rewrote roughly a dozen sentences across the Order section, all six layer analyses, the levers section, and the conclusion to remove the "is not X, it is Y" pattern and state findings plainly instead. Clarified the desk metaphor to say directly that the Fitbit was fixed by the first-contact rep without escalation.
+- Committed and pushed (`911e5a9`).
+
+---
+
 _Next entry: add when case status changes: Google responds, replacement dispatched, Klarna dispute opens, email verification result confirmed, the drafted Ana Corrales email or X post actually sends, or case closes._
