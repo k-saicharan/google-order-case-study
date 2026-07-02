@@ -130,3 +130,13 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 **Second correction, same day:** Sai clarified he gave Alex both the original case ID and the dashboard link (which lists all three case numbers). So the 1 Jul reply landing on the active thread is plausibly the escalation team's own reply, not proof the promised channel stayed silent. Reworded the 4th ledger line and Day 23 timeline entry again: the claim now rests on content (no dispatch date, no resolution, either way) rather than on which specific thread it landed on.
 
 **Names stripped, same day:** confirmed decision — the public site should not use individual agent names. Replaced Joanne/Jen/John/Blossom/Alex with "Google Support" throughout the ledger section (the only place they appeared); kept `@madebygoogle` since it's a brand handle. Applies to `index.html` only — the vault log and this file keep real names for internal record-keeping.
+
+---
+
+## 2026-07-02: X DM follow-up after its own deadline, plus a PII takedown request
+
+- Sai shared a new screenshot of the `@madebygoogle` X DM thread: a 3:08pm reply repeating that "a specialist is actively working on your case" with no dispatch date, sent over an hour after the 30 June promise's own 48-hour window had closed (1:09pm). Same message asks Sai to delete the DM screenshots he'd shared publicly and stop sharing "personally identifiable information," citing privacy.
+- Sai then shared the actual public X post being referenced (from `@curiousape_`): it contains only the case ID and a screenshot of this site's own ledger table (dates, quotes, case numbers), all of which are already public on `index.html`. No name, address, phone, email, or payment detail appears in either the DM or the public post. Assessed for Sai: order/case numbers aren't classic PII (Google's own support asked for the case ID to begin with); a support account asking someone to take down public evidence of an unresolved complaint, citing generic privacy language right after the post gained traction, reads as plausible deflection rather than a real privacy issue. Flagged this as an observation, not a certainty. Sai decided to remove the X post regardless.
+- Site changes: added a new timeline entry (2 Jul, neutral dot) for the 3:08pm reply and the takedown request, appended after the existing Day 23 entry. Updated the ledger's footnote count of no-number follow-ups from six to seven (added 2 July, "actively working on it").
+- Not logged as a fifth tally mark: this reply gave no numbered turnaround window, so it counts toward the vague-follow-up footnote, not the four-mark tally.
+- Not done: vault log update (external Obsidian vault, outside this repo's scope this session).
