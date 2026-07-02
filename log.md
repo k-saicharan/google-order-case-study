@@ -124,3 +124,5 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 - Verified in-browser via local static server: day count auto-updated to 23, all 4 tally marks render struck, ledger statuses all read Broken, no layout breakage into Evidence Key below.
 - Vault log updated first per protocol, then site, then this entry.
 - Not done: sharing the link publicly. That's the next call, pending Sai.
+
+**Correction, same day:** first pass described the 1 Jul 16:17 reply as landing on "an unrelated thread, with no case detail attached." Sai caught this: that email does carry a case ID (`7-9313000041414`, in the subject line), and there was no newer email being missed — Gmail was already current. The actual distinction is that it's the *wrong* case ID against what Alex's DM specifically promised (`2-6444000041410`), not that it's case-less. Fixed the ledger entry and Day 23 timeline copy on the site to say that precisely.
