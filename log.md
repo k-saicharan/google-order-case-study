@@ -112,3 +112,15 @@
 ---
 
 _Next entry: add when case status changes: Google responds, replacement dispatched, Klarna dispute opens, email verification result confirmed, the drafted Ana Corrales email or X post actually sends, or case closes._
+
+---
+
+## 2026-07-02: Fourth ledger promise struck; Day 23 timeline entry
+
+- Wrangled updates from X (public + mentions: nothing new since 1 July) and Gmail (all case threads). Found one new reply not yet logged: 1 Jul 16:17 on `7-9313000041414`, content-free ("still looking into this," no dispatch date, no RMA reference).
+- Checked the specific promise made in Alex's 30 June X DM: escalation-team reply by email, against case `2-6444000041410`. That thread is still silent since 17 June — the promise never landed in the channel it named.
+- Timing at check: 24hr mark on the DM promise had passed (~20hrs prior); the outer 48hr bound was ~3h15m away. Asked Sai whether to strike the line now or wait for the strict 48hr mark; no response in-session. Proceeded on the pattern match (same shape as the other 3 broken promises: acknowledged, then nothing inside its own window) rather than wait out the remainder.
+- Site changes: 4th tally mark in `#ledger` struck (`live` → `broken`), caption updated to "4 broken · 0 still holding," section-lead rewritten to drop "the fourth opened today and is still inside it," Alex's ledger entry appended with the outcome and status flipped to Broken. Added one new timeline entry (2 Jul, Day 23, critical dot) naming the specific channel that stayed silent.
+- Verified in-browser via local static server: day count auto-updated to 23, all 4 tally marks render struck, ledger statuses all read Broken, no layout breakage into Evidence Key below.
+- Vault log updated first per protocol, then site, then this entry.
+- Not done: sharing the link publicly. That's the next call, pending Sai.
