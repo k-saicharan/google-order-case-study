@@ -126,3 +126,7 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 - Not done: sharing the link publicly. That's the next call, pending Sai.
 
 **Correction, same day:** first pass described the 1 Jul 16:17 reply as landing on "an unrelated thread, with no case detail attached." Sai caught this: that email does carry a case ID (`7-9313000041414`, in the subject line), and there was no newer email being missed — Gmail was already current. The actual distinction is that it's the *wrong* case ID against what Alex's DM specifically promised (`2-6444000041410`), not that it's case-less. Fixed the ledger entry and Day 23 timeline copy on the site to say that precisely.
+
+**Second correction, same day:** Sai clarified he gave Alex both the original case ID and the dashboard link (which lists all three case numbers). So the 1 Jul reply landing on the active thread is plausibly the escalation team's own reply, not proof the promised channel stayed silent. Reworded the 4th ledger line and Day 23 timeline entry again: the claim now rests on content (no dispatch date, no resolution, either way) rather than on which specific thread it landed on.
+
+**Names stripped, same day:** confirmed decision — the public site should not use individual agent names. Replaced Joanne/Jen/John/Blossom/Alex with "Google Support" throughout the ledger section (the only place they appeared); kept `@madebygoogle` since it's a brand handle. Applies to `index.html` only — the vault log and this file keep real names for internal record-keeping.
