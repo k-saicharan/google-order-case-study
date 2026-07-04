@@ -156,3 +156,30 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 - Verified no 7+ digit numeric strings remain anywhere in the file after the pass.
 - This is separate from and in addition to the earlier agent-name stripping (2 July) &mdash; that covered people's names, this covers account-identifying numbers.
 - Also drafted (not sent) a soft-tone follow-up in Gmail thread `7-9313000041414`, replying to John's 3 July denial: restates the two unanswered questions plainly, framed as "I don't think I explained myself clearly" rather than calling out the non-answer directly, per Sai's request for a gentler tone this round.
+
+---
+
+## 2026-07-05 (same day): Lever-vs-thread nudge added, sent, dashboard pushed live
+
+Sai asked for one more thing in the draft before sending: a nudge to get Google to reveal *why* the case is actually stuck — whether it's a genuine policy call (a real lever, something the site's "Six Layers" / "Failure Levers" analysis could cite directly) or a routing/tracking problem between teams (a thread/system issue, meaning some of the site's inferred levers might be wrong and need cutting). The site's whole systems analysis has been built on inference so far, since nobody at Google has ever said which failure mode is actually true.
+
+Added one paragraph to the draft, in plain non-jargon language for an actual customer email: asks whether this is "a considered decision based on a specific policy" or the case has "gotten stuck somewhere between teams or systems," framed as "either answer is fine, I just want to know which." Created as a second Gmail draft rather than editing the first, since no draft-update or draft-delete tool is available in this environment — flagged the duplicate to Sai to remove manually rather than leaving it silently in place.
+
+Sai sent it:
+
+> "done sent - push the edits"
+
+Pushed the three pending commits to `origin/main` (`74585c1` denial timeline + panel, `f3d0ad7` number redaction, `06e4d77` log entries) — landed as `bcb8d64..06e4d77`. The live dashboard at `k-saicharan.github.io/google-order-case-study` now reflects Day 26, the denial panel, and the redacted case/order/DHL numbers. Confirmed before pushing per standing protocol; this is the first push since the 3 July session.
+
+**Open, not resolved:**
+- Whether Google's reply to the lever-vs-thread question actually names a real cause, or repeats the same non-answer a third time.
+- The duplicate Gmail draft on `7-9313000041414` — Sai needs to delete the earlier, superseded one manually.
+- Klarna instalment 2 (£179.67) due 11 July — pause still not triggered.
+- A rendered visual check of the live push (Chrome extension wasn't connected this session; only structural verification was done pre-push).
+
+**Files/commits this session:**
+- Modified: `~/Projects/google-case-study/index.html` (denial timeline + panel, number redaction)
+- Modified: `~/Projects/google-case-study/log.md` (three dated entries)
+- Modified (Obsidian vault): `Google Store Order Case — Log.md` (Day 26 entry, full rewrite via `write_note` after `patch_note` failed on this file)
+- Gmail: two drafts created on thread `7-9313000041414`; second one sent by Sai
+- Pushed to `google-order-case-study` main: `74585c1`, `f3d0ad7`, `06e4d77`
