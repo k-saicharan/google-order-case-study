@@ -130,3 +130,19 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 **Second correction, same day:** Sai clarified he gave Alex both the original case ID and the dashboard link (which lists all three case numbers). So the 1 Jul reply landing on the active thread is plausibly the escalation team's own reply, not proof the promised channel stayed silent. Reworded the 4th ledger line and Day 23 timeline entry again: the claim now rests on content (no dispatch date, no resolution, either way) rather than on which specific thread it landed on.
 
 **Names stripped, same day:** confirmed decision — the public site should not use individual agent names. Replaced Joanne/Jen/John/Blossom/Alex with "Google Support" throughout the ledger section (the only place they appeared); kept `@madebygoogle` since it's a brand handle. Applies to `index.html` only — the vault log and this file keep real names for internal record-keeping.
+
+---
+
+## 2026-07-05: The denial holds under direct challenge; new "Denial" panel
+
+- Wrangled updates from Gmail (all three case threads, full bodies) and X (mentions: nothing new since 1 July). The vault log already had the 2 July first denial and the 3 July clarification-request-sent entry from a prior session; this session's new fact was the reply to that clarification: 3 July, 20:22 UTC, on `7-9313000041414` — a second denial, near-verbatim to the first, still no RMA number, no clause cited, and it answers neither of the two direct questions asked (device status vs. trade-in exception; which clause).
+- Vault log updated first (new dated entry, Day 26), then the site.
+- Site changes to `index.html`:
+  - Two new timeline entries: the 2 July first denial, and the 3 July second denial/non-answer, wired into the existing connector chain (added the missing connector on the prior last item so the line runs through).
+  - New section, `#denial` ("The Denial"), placed after the Promise Ledger and before the Evidence Key. Reuses the existing `.ledger-card` / `.tally-row` / `.ledger-entry` components rather than inventing new CSS — two tally strokes, both struck, captioned "2 denials issued · 0 specifics given," with the two dated quotes and a closing note spelling out exactly what the two unanswered questions were.
+  - Added a nav link ("The Denial") between "The Tally" and "Six Layers."
+  - Refreshed hardcoded day-count prose that doesn't come from the live JS timer: hero badge copy ("Day 26: Denied, twice, without specifics" — replaces the generic "Unresolved" status text, since the case has moved past pure stalling into an explicit if unspecific refusal), hero-sub ("26-day support loop that produced a denial with no clause attached"), stat-bar fallback, and the timeline heading ("26 days, reconstructed"). These were previously accurate at Day 21 and hadn't been touched across two intermediate sessions — worth watching for going forward since the live JS timer masks that the surrounding prose is stale until someone reads it closely.
+- **Verification gap, flagged rather than glossed over:** the Chrome extension used for in-browser rendering checks in prior sessions wasn't connected this session. Verified structurally instead — div open/close tag count balanced (284/284), all seven `<section id>` blocks present including the new `denial` one, and grepped the exact new strings landed correctly — but did not get an actual rendered screenshot this time. Should visually confirm before or shortly after push.
+- Not yet pushed to `origin/main`. Confirming with Sai first per standing protocol (public, shared link).
+
+**Next entry: add when case status changes: Google responds, replacement dispatched, Klarna dispute opens, or case closes.**
