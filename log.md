@@ -146,3 +146,13 @@ _Next entry: add when case status changes: Google responds, replacement dispatch
 - Not yet pushed to `origin/main`. Confirming with Sai first per standing protocol (public, shared link).
 
 **Next entry: add when case status changes: Google responds, replacement dispatched, Klarna dispute opens, or case closes.**
+
+---
+
+## 2026-07-05 (same day): Redacted case/order/DHL reference numbers
+
+- Sai flagged that real case numbers, order numbers, and DHL tracking/correspondence refs on the public page aren't safe to share as-is.
+- Replaced every real numeric identifier with an X-padded placeholder of the same length/format (e.g. `2-6444000041410` &rarr; `2-XXXXXXXXXXXXX`, `GS.0190-9911-6648` &rarr; `GS.XXXX-XXXX-XXXX`). Kept the leading case-type digit (2-/4-/7-) so the "three distinct case numbers" narrative still reads correctly without exposing a real, searchable number. Same treatment for both DHL refs.
+- Verified no 7+ digit numeric strings remain anywhere in the file after the pass.
+- This is separate from and in addition to the earlier agent-name stripping (2 July) &mdash; that covered people's names, this covers account-identifying numbers.
+- Also drafted (not sent) a soft-tone follow-up in Gmail thread `7-9313000041414`, replying to John's 3 July denial: restates the two unanswered questions plainly, framed as "I don't think I explained myself clearly" rather than calling out the non-answer directly, per Sai's request for a gentler tone this round.
