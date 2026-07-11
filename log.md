@@ -183,3 +183,46 @@ Pushed the three pending commits to `origin/main` (`74585c1` denial timeline + p
 - Modified (Obsidian vault): `Google Store Order Case — Log.md` (Day 26 entry, full rewrite via `write_note` after `patch_note` failed on this file)
 - Gmail: two drafts created on thread `7-9313000041414`; second one sent by Sai
 - Pushed to `google-order-case-study` main: `74585c1`, `f3d0ad7`, `06e4d77`
+
+---
+
+## 2026-07-09: Day 30 wrangle — third denial + Klarna pause confirmed
+
+Wrangled updates from Gmail (all three case threads, full bodies read) and the Klarna dispute thread. X (public + mentions) could not be re-checked this session: no X posts/mentions tool is connected in this session's toolset. Last verified X state remains nothing new since 1 July. Two substantive new facts since the 5 July (Day 26) session:
+
+- **Third denial, 6 July 11:41 UTC, `7-9313000041414`.** Reply to Sai's 4 July soft-tone clarification (which had explicitly offered Google an either/or: considered policy decision vs. case stuck between teams/systems, "either answer is fine"). Google repeated the denial paragraph a third time: "After a thorough second review, we unfortunately cannot grant an exception. Your request remains denied as it falls outside the standard Google Store Sales Terms and Return Policy." No clause, no RMA, no answer to which request, no answer to the causal question. First reply in the whole thread signed only "The Google Support Team" (no agent name). The finding: the vagueness held even against the gentlest possible framing that handed Google a free exit.
+- **Klarna pause confirmed, 3 July 11:06 UTC — and a correction.** Klarna emailed that it has "temporarily paused any payment schedule" off Sai's item-not-received report. This resolves the long-open "Klarna pause not triggered" item AND corrects the 5 July log/vault entries, which both stated no pause as of Day 26 — the confirmation email predated that check by two days and was missed. The £179.67 instalment due 11 July is paused, not live, while the dispute holds. Analytically: the one lever that moved sat entirely outside Google.
+
+Site changes to `index.html`:
+- Hero badge "Denied, twice" &rarr; "Denied, three times"; hero-sub reworked to Day 30 / three denials + the Klarna-pause beat; timeline heading "26 days" &rarr; "30 days" (all hardcoded prose; the JS day counter already reads live from the 9 June order date).
+- Timeline: edited the 3 July second-denial item (added connector, trimmed the now-false "two days of silence follow"), added two new entries: 3 July Klarna pause (neutral dot, framed as the one external lever that worked) and 6 July third denial (critical dot, the either/or refusal).
+- "The Denial" panel: eyebrow "Day 23&ndash;27", heading "Three denials. Every question, the same paragraph.", section-lead updated to three questions, tally expanded to three strokes (n=3), new 6 July ledger entry, closing note expanded to the third (causal) question.
+- Reused existing components throughout (no new CSS). Also fixed one pre-existing literal em dash in a JS comment to honour the global no-em-dash rule.
+
+**Verification:** Chrome extension not connected this session, so no rendered screenshot. Verified structurally instead: div open/close balanced (304/304), all seven `<section>` blocks intact, three tally strokes confirmed inside the denial panel, all new strings grepped present, zero literal em dashes remaining. A visual check before or shortly after push is still worth doing.
+
+**Not yet pushed to `origin/main`** — confirming with Sai first per standing protocol (public, shared link).
+
+**Open / next:**
+- The email thread is exhausted (three identical denials). Live off-thread moves: a formal complaint (separate mandatory internal path, still unused); the Klarna dispute is already running. A short closing reply to John naming the pattern (for the record, not another question) is optional.
+- The earlier duplicate Gmail draft on `7-9313000041414` may still need manual deletion by Sai.
+
+---
+
+## 2026-07-11: Day 32 — full content reframe to the operator-seat decision simulation
+
+Vault-first (source of truth): the session's thinking was written to the vault as `The Operator's Seat — A Decision Simulation.md`, cross-linked from the Framework and the running Log. The site was then rebuilt from it. Reframe is applied to the working tree, not pushed.
+
+The reframe (from "role-hat systems teardown / silos fail collectively" to a decision simulation from a new hire's seat):
+- **Cut** the two old argument sections entirely: Six System Layers and Failure Levers (~327 lines removed).
+- **New spine:** a `#simulation` section inserted between The Order and the Timeline (argument-first, per Sai). It opens with a "rules of the seat" primer (the intake Remediate-vs-Adjudicate mode-sort, and the Class A vs Class B carrier-disposition distinction), then six fork cards, then a meta-fork pull quote. Fork 5 (the limbo with no owner or clock) is flagged as the payload and the answer to "why 32 days."
+- **Component reuse, no new CSS:** the six fork cards reuse the existing `.layer-panel layer-1..6` component (header, collapsible body holding "the right call" and "the wall", a `.layer-finding` outcome, and the `.toggle-btn` collapse driven by the existing JS). The six accent colours carry over.
+- **Hero:** headline is now "At every fork the right call was in view. The seat couldn't make it."; subhead rewritten to the simulation frame; badge "Day 32: denied three times, still in limbo".
+- **Stat bar:** dropped "6 system layers implicated"; added "0 internal forces that moved it"; relabelled the live counter "Days in limbo, uncounted inside".
+- **Conclusion:** The Pattern (`#pattern`) rewritten as The Finding (`#finding`) on the alignment-threshold result (alignment holds below a value/risk line and inverts above it).
+- **Evidence wired to forks:** The Order lead-out now points to Fork 3; the Timeline retitled "the record the simulation reads from"; the Tally lead cites Fork 5; the Denial lead cites Fork 6. Fork cards link back to each.
+- **Cleanup:** removed all 5 remaining `&mdash;` em-dash entities in kept sections (global no-em-dash rule); updated stale day-number literals (badge/stat/elapsed to 32) and the footer/title-tag copy; nav updated to Order / The Simulation / Timeline / The Tally / The Denial / The Finding.
+
+**Verification (structural):** 0 em dashes; 0 orphan `#layers`/`#levers`/`#pattern` anchors; div balance 248/248; 6/6 sections; 6 `.layer-panel` fork cards present; section order confirmed Simulation → Timeline → Tally → Denial → Evidence → Finding. Pre-reframe backup saved to scratchpad. No rendered screenshot this session (browser not driven); a visual check is still worth doing before/after push.
+
+**Not pushed.** Public shared link; awaiting Sai's explicit go per standing protocol. Net diff: index.html +247 / -365.

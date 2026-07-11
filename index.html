@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Debrief: Order GS.XXXX-XXXX-XXXX: External Operations Analysis</title>
+  <title>The Operator's Seat: a Google Store order run as a decision simulation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1065,12 +1065,11 @@
   <nav>
     <div class="nav-inner">
       <a href="#order">The Order</a>
+      <a href="#simulation">The Simulation</a>
       <a href="#timeline">Timeline</a>
       <a href="#ledger">The Tally</a>
       <a href="#denial">The Denial</a>
-      <a href="#layers">Six Layers</a>
-      <a href="#levers">Failure Levers</a>
-      <a href="#pattern">The Pattern</a>
+      <a href="#finding">The Finding</a>
     </div>
   </nav>
 
@@ -1078,11 +1077,11 @@
     <header class="hero">
 
       <div class="hero-eyebrow">
-        <span class="badge badge-status"><span class="pulse-dot"></span> Day <span id="js-day-count">26</span>: Denied, twice, without specifics</span>
+        <span class="badge badge-status"><span class="pulse-dot"></span> Day <span id="js-day-count">32</span>: denied three times, still in limbo</span>
         <span class="badge badge-type">External Operations Analysis</span>
       </div>
-      <h1>Order GS.XXXX&#8209;XXXX&#8209;XXXX</h1>
-      <p class="hero-sub">A Pixel 10 Pro XL, a silent carrier switch, a 26-day support loop that produced a denial with no clause attached, and two financial systems counting down independently. This is what six operational layers collectively produced.</p>
+      <h1>At every fork the right call was in view. The seat couldn't make it.</h1>
+      <p class="hero-sub">A Pixel 10 Pro XL, flagged and held by the carrier, never delivered, still unresolved. This page runs the case as a decision simulation: you take the support operator's seat, with only the visibility and the authority the job actually grants, and at each fork you are asked for the right move, then shown whether the seat is allowed to make it. The case was fixable on day 7. It has run into a second month with no one at fault, because the authority to act was never given to the person who could already see the answer.</p>
       <div class="hero-meta">
         <div class="hero-meta-item">
           <span class="meta-label">Order Date</span>
@@ -1090,7 +1089,7 @@
         </div>
         <div class="hero-meta-item">
           <span class="meta-label">Elapsed</span>
-          <span class="meta-value" id="js-elapsed" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; letter-spacing: 0.03em;">26d 00h 00m 00s</span>
+          <span class="meta-value" id="js-elapsed" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; letter-spacing: 0.03em;">32d 00h 00m 00s</span>
         </div>
         <div class="hero-meta-item">
           <span class="meta-label">Case References</span>
@@ -1107,12 +1106,12 @@
   <!-- STAT BAR -->
   <div class="stat-bar">
     <div class="stat">
-      <span class="stat-number" id="js-days">26</span>
-      <span class="stat-label">Days unresolved</span>
+      <span class="stat-number" id="js-days">32</span>
+      <span class="stat-label">Days in limbo, uncounted inside</span>
     </div>
     <div class="stat">
-      <span class="stat-number">6</span>
-      <span class="stat-label">System layers implicated</span>
+      <span class="stat-number">0</span>
+      <span class="stat-label">Internal forces that moved it</span>
     </div>
     <div class="stat">
       <span class="stat-number">3</span>
@@ -1145,14 +1144,191 @@
       </div>
     </div>
 
-    <p style="margin-top: 20px; font-size: 14px; color: var(--ink-3); line-height: 1.7;">Same order, same agent, same call. The Fitbit got fixed on the spot because the first person who picked up the phone had the authority to fix it. The Pixel got pushed up to a specialist team that then produced nothing visible for 21 days. That gap is the central finding of this analysis.</p>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--ink-3); line-height: 1.7;">Same order, same agent, same call. The accessory was fixed on the spot, because the first person who answered had the authority to fix it. The phone was routed up to a specialist team and produced nothing visible for weeks. Hold that split; it is Fork 3 of the simulation below.</p>
+  </section>
+
+  <!-- THE SIMULATION -->
+  <section id="simulation">
+    <p class="section-eyebrow">The Simulation</p>
+    <h2>Take the seat. Six forks, one held parcel.</h2>
+    <p class="section-lead">No special access and no hindsight, only the console an operator is given and the authority that comes with it. At each fork the correct move is one a competent person in the chair can see. Watch the point where the chair runs out of authority.</p>
+
+    <div class="conclusion-block">
+      <h3>The rules of the seat</h3>
+      <p>Every "I did not receive it" is sorted at intake into one of two modes. <strong>Remediate:</strong> treat it as a fulfilment failure the company owns, and fix it. <strong>Adjudicate:</strong> treat it as an exception the customer is requesting, and decide whether to grant it; the institutional default here is deny until proven. High-value, in-limbo cases fall into Adjudicate by default.</p>
+      <p>There are also two structurally different "not received" claims. <strong>Class A:</strong> the carrier's record shows delivered and the customer disputes it; this is the only place fraud can live. <strong>Class B:</strong> the carrier's own record shows held, never delivered, never scanned out; here the carrier's record rules fraud out entirely. This case is unambiguously Class B. The carrier's last-scan disposition is the fact that should route it. It is never the fact that routes it.</p>
+    </div>
+
+    <!-- Fork 1 -->
+    <div class="layer-panel layer-1">
+      <div class="layer-header">
+        <div class="layer-icon">&#128229;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 1 &middot; Intake</div>
+          <div class="layer-title">A failure to fix, or a claim to assess?</div>
+          <div class="layer-role">A customer reports an order that never arrived and shows no tracking.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> The carrier shows the parcel held, so this is Class B: a fulfilment failure the company owns. Log it to Remediate and chase the carrier yourself.</p>
+            <p><strong>The wall.</strong> It enters as a support enquiry, which is Adjudicate mode by default. The mode is set wrong at the door, before anyone reads the carrier record.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome</div>
+        Everything downstream now runs on "deny until proven," applied to a case that had nothing to prove.
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <!-- Fork 2 -->
+    <div class="layer-panel layer-2">
+      <div class="layer-header">
+        <div class="layer-icon">&#128230;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 2 &middot; Blind to the carrier</div>
+          <div class="layer-title">Read the carrier, or wait to be told?</div>
+          <div class="layer-role">The operator's console shows no live carrier status while the parcel sits on a dangerous-goods hold.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> Pull the carrier's own tracking. Its last scan says held on a DG flag, not lost. Treat that as the fact that decides the case.</p>
+            <p><strong>The wall.</strong> The seat has no live carrier view, so the dispositive fact only enters the case when the customer sends the company a screenshot of the carrier's own page.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome</div>
+        The one fact that should route the case arrives as a customer attachment, days late, into a case already mis-moded. <a href="#timeline">See the record.</a>
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <!-- Fork 3 -->
+    <div class="layer-panel layer-3">
+      <div class="layer-header">
+        <div class="layer-icon">&#9878;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 3 &middot; The value split</div>
+          <div class="layer-title">Two items on one order. Clear both?</div>
+          <div class="layer-role">Same call, same agent: a cheap accessory and a high-value phone.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> Both are the same failure. Resolve both from the chair.</p>
+            <p><strong>The wall.</strong> The accessory clears on the spot; the phone routes to a specialist team. Authority is sliced by value and risk, not by the problem.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome</div>
+        The accessory is delivered. The phone leaves the only seat that was actually talking to the customer. <a href="#order">See the two orders.</a>
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <!-- Fork 4 -->
+    <div class="layer-panel layer-4">
+      <div class="layer-header">
+        <div class="layer-icon">&#9940;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 4 &middot; Inside the specialist queue</div>
+          <div class="layer-title">Reship the held phone, or not?</div>
+          <div class="layer-role">High-value phone, held but not confirmed lost, with a trade-in and a promo bound to the order.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> Terminalise the held unit first: release, return-to-sender, or dispose. That retires the double-fulfilment risk and clears the path to a clean reship.</p>
+            <p><strong>The wall.</strong> The seat has no interface to carrier operations, so it cannot terminalise anything. The only lever it holds is grant or deny, and reshipping an unconfirmed-lost asset risks paying twice.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome</div>
+        The denial is born here. Class B rules out any doubt about the customer; what remains is double-fulfilment risk, met with the only tool the seat holds.
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <!-- Fork 5 -->
+    <div class="layer-panel layer-5">
+      <div class="layer-header">
+        <div class="layer-icon">&#8987;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 5 &middot; The limbo has no clock</div>
+          <div class="layer-title">The unit is stuck between two teams. Who moves it?</div>
+          <div class="layer-role">The held parcel sits between carrier operations and support; neither can act without the other.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> Escalate on elapsed time. A held asset past a set number of days must force a terminal decision.</p>
+            <p><strong>The wall.</strong> Carrier ops waits on the shipper; the support seat waits on carrier ops; remediation cannot proceed while the unit is in limbo. The DG flag makes terminal resolution compliance-heavy. And nothing measures elapsed limbo, so nothing escalates it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome &middot; the payload</div>
+        This is the whole answer to why it took 32 days. A body at rest with no internal force. Every stall window ran out with no owner and no clock. <a href="#ledger">See the tally.</a>
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <!-- Fork 6 -->
+    <div class="layer-panel layer-6">
+      <div class="layer-header">
+        <div class="layer-icon">&#128257;</div>
+        <div class="layer-title-group">
+          <div class="layer-number">Fork 6 &middot; The denial, three times</div>
+          <div class="layer-title">Pressed for specifics: reclassify, or re-run the review?</div>
+          <div class="layer-role">The customer asks plainly what was denied and why, and offers an explicit way out.</div>
+        </div>
+      </div>
+      <div class="layer-collapsible">
+        <div class="layer-collapsible-content">
+          <div class="layer-body">
+            <p><strong>The right call.</strong> Reclassify as a fulfilment failure, which dissolves the exception question entirely.</p>
+            <p><strong>The wall.</strong> There is no control to reclassify, and the metrics reward closing the ticket. So the seat re-runs the exception review with the same missing authority and emits the same paragraph. The customer's question, is this a real decision or is it just stuck, cannot be answered honestly from the chair.</p>
+          </div>
+        </div>
+      </div>
+      <div class="layer-finding">
+        <div class="finding-label">Outcome</div>
+        The same paragraph, three times, no clause, no answer. <a href="#denial">See the denials.</a>
+      </div>
+      <button class="toggle-btn" aria-expanded="false" data-collapsed="The call and the wall &darr;" data-expanded="Collapse &uarr;">
+        <span class="btn-text">The call and the wall &darr;</span> <span class="chevron">&#9660;</span>
+      </button>
+    </div>
+
+    <p class="pull-quote">"The only things that ever moved the case came from outside the company: a payment pause filed with Klarna, a post made in public. That is the proof there was no internal force at all."</p>
   </section>
 
   <!-- TIMELINE -->
   <section id="timeline">
     <p class="section-eyebrow">Timeline</p>
-    <h2>26 days, reconstructed</h2>
-    <p class="section-lead">Each contact produced the same output: escalated, 24&ndash;48 hours. The specialist team never surfaced. Financial timers ran regardless.</p>
+    <h2>The record the simulation reads from</h2>
+    <p class="section-lead">The dated facts the forks above are built on. Each contact produced the same output: escalated, 24&ndash;48 hours. The specialist team never surfaced. Financial timers ran regardless.</p>
 
     <div class="timeline">
 
@@ -1305,7 +1481,7 @@
           </div>
           <div class="timeline-content">
             <strong>Day 23. First denial in 24 days, with less detail than any stall message before it.</strong>
-            <span>Google Support states a "request" has been "denied in accordance with the Google Store Sales Terms and Return Policy." No RMA number, first message in the case to omit one. No clause cited. Which request &mdash; the physical replacement or a separate verbal promise from 21 June &mdash; is not stated.</span>
+            <span>Google Support states a "request" has been "denied in accordance with the Google Store Sales Terms and Return Policy." No RMA number, first message in the case to omit one. No clause cited. Which request, the physical replacement or a separate verbal promise from 21 June, is not stated.</span>
           </div>
         </div>
       </div>
@@ -1315,10 +1491,38 @@
         <div class="timeline-content-wrap">
           <div class="timeline-line-col">
             <div class="timeline-dot critical"></div>
+            <div class="timeline-connector"></div>
           </div>
           <div class="timeline-content">
-            <strong>Day 24&ndash;26. Asked twice, directly. Answered neither time.</strong>
-            <span>A same-day reply asks Google to state plainly which request was denied and to name the specific policy clause. The response, same evening: "reviewed... for a second time... still unable to grant an exception." Same paragraph, no RMA number, no clause, no answer to either question. Two days of silence follow.</span>
+            <strong>Day 24. A second denial, still answering neither question.</strong>
+            <span>A same-day reply asks Google to state plainly which request was denied and to name the specific policy clause. The response, same evening: "reviewed... for a second time... still unable to grant an exception." Same paragraph, no RMA number, no clause, no answer to either question.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">3 Jul</div>
+        <div class="timeline-content-wrap">
+          <div class="timeline-line-col">
+            <div class="timeline-dot neutral"></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div class="timeline-content">
+            <strong>The one lever that moved sat outside Google entirely.</strong>
+            <span>A single "item not received" report to Klarna pauses the payment schedule the same day: no escalation queue, no 24&ndash;48 hour window, no case number. Thirty days of Google-internal escalation could not stop the delivery clock; one external dispute stopped the payment clock in a single step.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">6 Jul</div>
+        <div class="timeline-content-wrap">
+          <div class="timeline-line-col">
+            <div class="timeline-dot critical"></div>
+          </div>
+          <div class="timeline-content">
+            <strong>Day 27. A third denial, refusing even the easy answer.</strong>
+            <span>The customer's reply had offered Google a way out: is this a considered policy decision, or has the case simply gotten stuck between teams and systems; either answer is fine. The response repeats the denial paragraph a third time. No clause, no RMA, and no answer to which of the two it is. Signed only "The Google Support Team," with no name attached.</span>
           </div>
         </div>
       </div>
@@ -1330,7 +1534,7 @@
   <section id="ledger">
     <p class="section-eyebrow">The Pattern, Counted</p>
     <h2>Every time they said "24&ndash;48 hours"</h2>
-    <p class="section-lead">Four separate contacts, across two channels (email and X), gave an explicit turnaround window rather than a vague "we'll follow up." All four have now run past their own stated window.</p>
+    <p class="section-lead">Four separate contacts, across two channels (email and X), gave an explicit turnaround window rather than a vague "we'll follow up." All four have now run past their own stated window. This is the evidence for Fork 5: nothing measured the elapsed limbo, so nothing escalated it.</p>
 
     <div class="ledger-card">
       <div class="tally-row">
@@ -1373,16 +1577,17 @@
 
   <!-- THE DENIAL -->
   <section id="denial">
-    <p class="section-eyebrow">Day 23&ndash;26</p>
-    <h2>Two denials. Two direct questions. Zero answers.</h2>
-    <p class="section-lead">After 23 days of stalling, Google's first substantive position on the case was a denial &mdash; delivered with less specificity than any of the stall messages before it. Asked twice, plainly, what was actually denied and under which policy clause, the reply both times was the same paragraph, unchanged.</p>
+    <p class="section-eyebrow">Day 23&ndash;27</p>
+    <h2>Three denials. Every question, the same paragraph.</h2>
+    <p class="section-lead">Google's first substantive position on the case, after 23 days of stalling, was a denial, delivered with less specificity than any stall message before it. Asked three times, plainly (what was denied, under which clause, and whether this was a real decision or a case stuck between systems), the reply was the same paragraph each time. This is the evidence for Fork 6: with no way to reclassify the case, the seat could only re-run the exception review and send the template again.</p>
 
     <div class="ledger-card">
       <div class="tally-row">
         <div class="tally-unit broken"><div class="tally-stroke"></div></div>
         <div class="tally-unit broken"><div class="tally-stroke"></div></div>
+        <div class="tally-unit broken"><div class="tally-stroke"></div></div>
         <div class="tally-caption">
-          <span class="n">2</span>
+          <span class="n">3</span>
           <div class="label">denials issued &middot; 0 specifics given</div>
         </div>
       </div>
@@ -1398,9 +1603,14 @@
           <div class="lg-quote"><strong>Google Support, email</strong> (same case, replying to a same-day request to name the denied item and cite the clause): "I have further reviewed the details of your request with our specialist team for a second time... we are still unable to grant an exception. Your request remains denied." Same paragraph, restated. Neither question answered.</div>
           <div class="ledger-status broken">Unanswered</div>
         </div>
+        <div class="ledger-entry">
+          <div class="lg-date">6 Jul, 11:41</div>
+          <div class="lg-quote"><strong>Google Support, email</strong> (same case, replying to a plainer restatement that offered an explicit either/or, a considered policy decision or a case stuck between teams and systems): "After a thorough second review, we unfortunately cannot grant an exception. Your request remains denied as it falls outside the standard Google Store Sales Terms and Return Policy." The same paragraph a third time. No clause, no RMA, and no answer to which of the two it was. Unsigned.</div>
+          <div class="ledger-status broken">Unanswered</div>
+        </div>
       </div>
 
-      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-3); line-height: 1.7;">The two questions were closed and answerable: (1) is the Pixel replacement itself denied, or still processing, given an earlier message said it had been "processed"; (2) is the denied "exception" the 21 June trade-in-protection commitment, and if so, which clause of the Sales Terms applies given the delay was not the customer's. A "second review" produced the identical answer to neither.</p>
+      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-3); line-height: 1.7;">The three questions were closed and answerable: (1) is the Pixel replacement itself denied, or still processing, given an earlier message said it had been "processed"; (2) is the denied "exception" the 21 June trade-in-protection commitment, and if so, which clause of the Sales Terms applies given the delay was not the customer's; (3) is this a considered policy decision at all, or a case stuck between teams and systems with "denied" standing in as a placeholder. Three replies produced the identical paragraph and answered none of them.</p>
     </div>
   </section>
 
@@ -1421,355 +1631,27 @@
     </div>
   </div>
 
-  <!-- SIX LAYERS -->
-  <section id="layers">
-    <p class="section-eyebrow">Six System Layers</p>
-    <h2>What each system saw, and what it couldn't.</h2>
-    <p class="section-lead">Each layer performed within its own boundary. No single system here is broken. What's missing is what none of them do: communicate across boundaries, escalate with urgency that grows over time, and surface the person holding the whole picture together at the centre.</p>
+  <!-- THE FINDING -->
+  <section id="finding">
+    <p class="section-eyebrow">The Finding</p>
+    <h2>Alignment holds below a threshold, and inverts above it.</h2>
+    <p class="section-lead">The case was fixable at every fork, and a competent person in the seat could see the fix. What changed with the value of the item was whether the seat was allowed to make it.</p>
 
-    <!-- Layer 1 -->
-    <div class="layer-panel layer-1">
-      <div class="layer-header">
-        <div class="layer-icon">&#128230;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 1 &middot; Fulfilment System</div>
-          <div class="layer-title">The Carrier Switch Nobody Announced</div>
-          <div class="layer-role">Automated postcode-routing logic &rarr; carrier booking system</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-confirmed">Confirmed</span> Google dispatch email named DPD. DHL tracking ref XXXXXXXXXX and DHL correspondence ref XXXXXXXXX confirm DHL handled the shipment. &nbsp;<span class="tag tag-research">Research</span> DPD published service restrictions for NI: confirmed. Google's own delivery documentation: researched; gap confirmed.
-          </div>
-          <div class="layer-body">
-            <p>Google's dispatch email named <strong>DPD</strong> as the carrier. The Pixel was physically handled by <strong>DHL</strong>. The customer was never told.</p>
-            <p>DPD publishes documented service restrictions for Northern Ireland: several DPD service tiers are explicitly unavailable to NI addresses. That's why the fulfilment system rerouted this order to DHL once it processed the NI destination, almost certainly a postcode-triggered rule in carrier selection logic, not a clerical mistake.</p>
-            <p>What does not exist (confirmed by research) is any mention of this carrier switch in Google Store's published delivery documentation. The customer had no way to know it happened. Critically, neither did the first-contact Order Management representative, who spent the entire contact searching the DPD system for a parcel that DHL was holding.</p>
-            <p>Under the Windsor Framework (in force from 1 May 2025, five weeks before this order), every GB&rarr;NI parcel shipment operates under new customs data requirements that add regulatory weight to any inspection on this route. The carrier switch was the first undocumented event. The Manchester hold was the second.</p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">What the system couldn't see</div>
-        The carrier booking system and the customer notification system do not share state. A switch in one does not update the other. There is no published mechanism for surfacing this gap to the customer or to Order Management.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-    <!-- Layer 2 -->
-    <div class="layer-panel layer-2">
-      <div class="layer-header">
-        <div class="layer-icon">&#9888;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 2 &middot; DHL Depot Operations</div>
-          <div class="layer-title">A Known Pattern, Not a Fringe Event</div>
-          <div class="layer-role">DHL Manchester depot handler &rarr; DG inspection protocol</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-confirmed">Confirmed</span> DHL ref XXXXXXXXX, "security inspection due to dangerous goods." Pixel 9 Pro battery ~20Wh, well below 100Wh threshold. &nbsp;<span class="tag tag-inferred">Inferred</span> Specific hold trigger: labelling/documentation, not genuine hazard. &nbsp;<span class="tag tag-research">Research</span> Edinburgh DHL/Pixel Community forum case: confirmed.
-          </div>
-          <div class="layer-body">
-            <p>The Pixel was flagged at Manchester on a dangerous goods hold. On the physics, this should not have happened: the battery is approximately 20Wh, a fraction of DHL's 100Wh domestic threshold. The hold came from a <strong>labelling or documentation trigger</strong>, not from the device being genuinely hazardous.</p>
-            <p>A Google Pixel has been held at a UK DHL depot before. Documented on Google's own Pixel Community support forum: a customer's Pixel sent for repair was held at the Edinburgh DHL depot, where DHL threatened to destroy the device. Same carrier. Same device category. Same DG hold pattern.</p>
-            <p>One occurrence would be an operational anomaly. Two makes it a <strong>recurring friction point</strong> between Google's use of DHL and DHL's DG screening for lithium battery devices. Google has an existing relationship with DHL; DHL handles Google's repair and return logistics. A relationship of that depth should include a resolution path for DG holds on standard consumer devices that doesn't require a customer to forward DHL's own tracking data back to Google's support team.</p>
-            <p>From the depot handler's seat, they did their job: flagged, held, issued "please contact DHL," and waited for the shipper to respond. The shipper has an existing DHL account. They waited 21 days. Google did not respond via that relationship. The customer did instead.</p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">What the depot couldn't see</div>
-        Whether Google (the shipper of record) had received the hold notification via the carrier channel. Whether this was consumer retail vs. repair logistics. Whether the NI destination added Windsor Framework scrutiny to the inspection. The handler's protocol was clear; the resolution path was not the handler's to own.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-    <!-- Layer 3 -->
-    <div class="layer-panel layer-3">
-      <div class="layer-header">
-        <div class="layer-icon">&#128222;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 3 &middot; Google Order Management</div>
-          <div class="layer-title">What the 48-Hour Loop Actually Means</div>
-          <div class="layer-role">Four Order Management contacts &rarr; escalation to specialist team</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-confirmed">Confirmed</span> Four agents, three case numbers, zero dispatch dates in 21 days. &nbsp;<span class="tag tag-research">Research</span> No publicly documented SLA for Google Store's specialist escalation tier: confirmed by research absence.
-          </div>
-          <div class="layer-body">
-            <p>Every contact across four Order Management representatives produced the same output: "escalated to the specialist team, update in 24&ndash;48 hours." No deadline was ever met. No dispatch date was ever given. Three case numbers were opened across three contacts.</p>
-            <p>Research found no publicly documented SLA for Google Store's specialist escalation team. The 24&ndash;48 hour window agents repeat isn't backed by any contractual commitment: it's a script, recited on day 1 and day 21 alike, because there's no accountability mechanism that would flag this case as overdue at day 3, day 7, or day 21. <strong>The system has no definition of "late" at this tier, so nothing here can be late.</strong></p>
-            <p>Three separate case IDs for one unresolved order is what it looks like when a system resets the thread on every contact instead of continuing it. Every new case number means a new agent inherits a case with no context from the previous contact, files a fresh escalation, and issues the same 24&ndash;48 hour commitment. The specialist team may have received the same case three times across three different IDs, or may have received it once without knowing the customer contacted again. Either way, the fragmentation helps the system coast; it doesn't help the customer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">The financial asymmetry the loop preserves</div>
-        Google's 15-day return window has passed. The promotional pricing (£360 trade-in credit and original Klarna terms) exists only in this order. A refund does not preserve those terms. The customer cannot easily walk away without losing significant value. They are financially locked into waiting for a replacement, because refund-and-repurchase is materially worse. The loop, whatever its intent, maintains a situation where the easier outcome for Google is refund, and the only viable outcome for the customer is replacement; this requires Google to do the harder thing.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-    <!-- Layer 4 -->
-    <div class="layer-panel layer-4">
-      <div class="layer-header">
-        <div class="layer-icon">&#128274;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 4 &middot; Google Specialist Team</div>
-          <div class="layer-title">Invisible by Design</div>
-          <div class="layer-role">Specialist escalation tier &rarr; black box, no external accountability</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-inferred">Inferred</span> Never appeared in any customer-facing communication. &nbsp;<span class="tag tag-confirmed">Confirmed</span> No published SLA exists. Written callback promise made 26 June: callback never came.
-          </div>
-          <div class="layer-body">
-            <p>The specialist team received this case (across three escalations and three case numbers) and produced no customer-facing output in 21 days. They have not appeared on any thread, have not called despite a written promise on 26 June, and have sent nothing in writing.</p>
-            <p>There's no published SLA for this tier, so there's nothing on record to breach. The team operates inside a black box with no external accountability mechanism. Cases enter. Time passes. Nothing forces them to surface.</p>
-            <p>The Edinburgh DHL/Pixel Community case adds relevant context: even on Google's own support forums (a space where Google employees participate) a Pixel held at a UK DHL depot for long enough that destruction was threatened required <strong>public forum pressure</strong> before the case moved. The specialist team model, wherever it applies, appears to share this characteristic: it moves when pressure reaches a channel the team cannot ignore, not when the case reaches a particular age or state.</p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">What's missing</div>
-        An internal clock that changes case status as time passes. A mechanism that forces the specialist team to surface with the customer once an escalation goes past a defined threshold. A customer-facing case view that shows specialist team status rather than a blank. None of these exist in the documented system.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-    <!-- Layer 5 -->
-    <div class="layer-panel layer-5">
-      <div class="layer-header">
-        <div class="layer-icon">&#9889;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 5 &middot; Google Billing Automation</div>
-          <div class="layer-title">A Gap Confirmed in Writing</div>
-          <div class="layer-role">Automated trade-in timer &rarr; no delivery-status check</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-confirmed">Confirmed</span> Trade-in warning fired 19 June. Google's published trade-in T&amp;Cs: researched. Google's own 22 June written acknowledgement: "entirely unfair." &nbsp;<span class="tag tag-inferred">Inferred</span> Whether a billing hold was subsequently applied.
-          </div>
-          <div class="layer-body">
-            <p>The trade-in warning fired on 19 June with the Pixel undelivered and a live support case open. Google's own published trade-in terms confirm why: the trade-in clock runs from dispatch date, with a 30-day charge trigger, and the documentation contains <strong>no provision for pausing the clock when delivery fails.</strong></p>
-            <p>This isn't specific to one customer's case: it's missing from the published policy itself. There is no documented mechanism (in Google's trade-in T&amp;Cs or support documentation) for automatically pausing trade-in deadlines when the new device is undelivered due to carrier failure. The system was never designed with this scenario in mind.</p>
-            <p>Google's own agents confirmed this in writing on 22 June: "entirely unfair for the trade-in clock to run while your new device is missing." That acknowledgement is significant not because it resolves the problem, but because it confirms <strong>the system produced an outcome its own teams recognise as wrong, and produced it anyway, because there was no mechanism to stop it.</strong> Whether that acknowledgement was ever converted into an actual billing system action remains unconfirmed.</p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">The policy gap in one sentence</div>
-        Google's trade-in T&amp;Cs have a 30-day clock triggered by dispatch date with no conditional branch for carrier-hold, failed delivery, or an open support case. Nobody built a branch for this scenario into the policy.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-    <!-- Layer 6 -->
-    <div class="layer-panel layer-6">
-      <div class="layer-header">
-        <div class="layer-icon">&#128197;</div>
-        <div class="layer-title-group">
-          <div class="layer-number">Layer 6 &middot; Klarna Pay in 3</div>
-          <div class="layer-title">Two Financial Systems, No Bridge</div>
-          <div class="layer-role">Klarna payment schedule &rarr; independent of carrier and order management state</div>
-        </div>
-      </div>
-      <div class="layer-collapsible">
-        <div class="layer-collapsible-content">
-          <div class="evidence-line">
-            <span class="tag tag-confirmed">Confirmed</span> Second instalment £179.67 due 11 July. Klarna buyer protection policy: customer must trigger directly. &nbsp;<span class="tag tag-research">Research</span> Pay in 3 not FCA regulated: confirmed from Klarna's published documentation.
-          </div>
-          <div class="layer-body">
-            <p>Klarna's payment schedule is running independently of everything above, counting toward an 11 July instalment for a device the customer has never received. Like Google's billing system, it has no connection to the carrier status or the open support case.</p>
-            <p>Klarna's own documentation confirms <strong>Pay in 3 isn't regulated by the FCA.</strong> The buyer protection pause (report a problem, payment pauses) is a policy Klarna chose to offer, not a legal requirement, so they can change or limit it unilaterally. The customer is relying on Klarna's goodwill here, not a regulated protection.</p>
-            <p>Two financial systems are applying payment pressure simultaneously for a device that was never delivered. Neither knows what the other is doing. Neither fires automatically when delivery fails. <strong>The customer is the only party who can see both clocks running at the same time.</strong></p>
-          </div>
-        </div>
-      </div>
-      <div class="layer-finding">
-        <div class="finding-label">Structural note</div>
-        Klarna's buyer protection requires the customer to actively trigger a dispute. It does not connect to Google Store's order status. A carrier hold that neither Google nor Klarna surfaces to their shared systems means the customer must file separately with both institutions, while both continue charging on their independent schedules.
-      </div>
-      <button class="toggle-btn" aria-expanded="false" data-collapsed="Full analysis &darr;" data-expanded="Collapse &uarr;">
-        <span class="btn-text">Full analysis &darr;</span> <span class="chevron">▼</span>
-      </button>
-    </div>
-
-  </section>
-
-  <!-- LEVERS -->
-  <section id="levers">
-    <p class="section-eyebrow">Failure Levers</p>
-    <h2>Five levers, ranked by impact</h2>
-    <p class="section-lead">Ranked by leverage: how much of the 21-day stall a fix would have prevented, and how structural the fix is, rather than by how disruptive each failure felt in the moment.</p>
-
-    <div class="lever-intro">
-      Lever #1 is the root cause: fix this and most others shrink. Lever #2 is the most mechanical and testable. Lever #3 is the infrastructure underpinning both. Lever #4 is the one the customer can test themselves, right now, without any org change. Lever #5 is largely a symptom of #1.
-    </div>
-
-    <!-- Lever 1 -->
-    <div class="lever-card">
-      <div class="lever-rank">
-        <div class="lever-rank-num">1</div>
-        <div class="lever-rank-label">Impact</div>
-      </div>
-      <div class="lever-body">
-        <span class="lever-impact impact-root">Root Cause</span>
-        <div class="lever-title">Escalation topology is hierarchical. It should be functional.</div>
-        <div class="lever-collapsible">
-          <div class="lever-collapsible-content">
-            <div class="lever-evidence">When a case needs specialist input, it gets pushed <em>up and away</em> from the rep who has context ("the specialist team," invisible to the handling representative and the customer) instead of the specialist being pulled <em>into</em> the existing thread alongside the rep who already has the history. The Fitbit resolved same-call because the first-contact rep had the authority to fix it herself. The Pixel has been with "the specialist team" since 21 June with zero visible movement. Fix this one thing and most of the other failures shrink: lost context, no written trail, slow turnaround all follow from this design. Industry-named: see PagerDuty's "Customer Service Incident Commander" model, functional vs hierarchical escalation in CX literature.</div>
-          </div>
-        </div>
-        <div class="lever-fix">
-          <span class="lever-fix-label">Fix</span>
-          Specialist joins the existing case thread rather than the case being hidden inside a separate queue. Same agent, same thread, same accountability.
-        </div>
-        <button class="toggle-btn" aria-expanded="false" data-collapsed="Evidence &darr;" data-expanded="Collapse &uarr;">
-          <span class="btn-text">Evidence &darr;</span> <span class="chevron">▼</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Lever 2 -->
-    <div class="lever-card">
-      <div class="lever-rank">
-        <div class="lever-rank-num">2</div>
-        <div class="lever-rank-label">Impact</div>
-      </div>
-      <div class="lever-body">
-        <span class="lever-impact impact-mechanical">Mechanical &amp; Testable</span>
-        <div class="lever-title">Financial automation is blind to carrier status.</div>
-        <div class="lever-collapsible">
-          <div class="lever-collapsible-content">
-            <div class="lever-evidence">Billing-side triggers (trade-in clock and Klarna schedule) run on fixed timers from order or dispatch date, with no link to live carrier status. The 19 June trade-in warning (£360 exposure) fired on schedule despite the Pixel never being delivered. This is the cleanest "here's the exact rule that's wrong" lever in the case. Narrow, mechanical, and quantifiable. Doesn't require new org design. Google's own agents confirmed the outcome was "entirely unfair" in writing.</div>
-          </div>
-        </div>
-        <div class="lever-fix">
-          <span class="lever-fix-label">Fix</span>
-          Gate financial triggers on carrier status &ne; "delivered normally" (held, exception, "contact carrier") before firing. One conditional check.
-        </div>
-        <button class="toggle-btn" aria-expanded="false" data-collapsed="Evidence &darr;" data-expanded="Collapse &uarr;">
-          <span class="btn-text">Evidence &darr;</span> <span class="chevron">▼</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Lever 3 -->
-    <div class="lever-card">
-      <div class="lever-rank">
-        <div class="lever-rank-num">3</div>
-        <div class="lever-rank-label">Impact</div>
-      </div>
-      <div class="lever-body">
-        <span class="lever-impact impact-infra">Infrastructure</span>
-        <div class="lever-title">No unified order + carrier + billing view exists.</div>
-        <div class="lever-collapsible">
-          <div class="lever-collapsible-content">
-            <div class="lever-evidence">The first-contact representative couldn't retrieve the order. The customer had to supply Google with DHL's own tracking screenshot. Three systems (Google Store, DHL/DPD, and Klarna) that should share one timeline don't. This is the infrastructure lever underneath #1 and #2. A coordinating role (lever 1) and status-aware billing (lever 2) both need this view to function. It's the bottleneck of bottlenecks, and the most substantial build, but the absence of it explains why the carrier switch was invisible to Order Management from day one.</div>
-          </div>
-        </div>
-        <div class="lever-fix">
-          <span class="lever-fix-label">Fix</span>
-          Single case view joining order status, live carrier tracking, and billing/promo state. The view that agents need to own a case end-to-end.
-        </div>
-        <button class="toggle-btn" aria-expanded="false" data-collapsed="Evidence &darr;" data-expanded="Collapse &uarr;">
-          <span class="btn-text">Evidence &darr;</span> <span class="chevron">▼</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Lever 4 -->
-    <div class="lever-card">
-      <div class="lever-rank">
-        <div class="lever-rank-num">4</div>
-        <div class="lever-rank-label">Impact</div>
-      </div>
-      <div class="lever-body">
-        <span class="lever-impact impact-tactical">Tactical: Actionable Now</span>
-        <div class="lever-title">Verbal commitments have no written backstop.</div>
-        <div class="lever-collapsible">
-          <div class="lever-collapsible-content">
-            <div class="lever-evidence">The 21 June "entirely unfair, trade-in protected" admission exists only as a phone memory (confirmed by the customer, with no email trace). Verbal commitments cannot be quoted, escalated against, or audited later. This is the cheapest lever and the one most directly actionable without requiring any org redesign: every verbal commitment gets restated in writing in the same case thread, same day. It is also the lever the customer can apply themselves, right now, by requesting written confirmation of each call outcome before ending the call.</div>
-          </div>
-        </div>
-        <div class="lever-fix">
-          <span class="lever-fix-label">Fix</span>
-          Mandatory written confirmation of any call outcome, in the existing case thread, before the call ends. Zero infrastructure cost.
-        </div>
-        <button class="toggle-btn" aria-expanded="false" data-collapsed="Evidence &darr;" data-expanded="Collapse &uarr;">
-          <span class="btn-text">Evidence &darr;</span> <span class="chevron">▼</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Lever 5 -->
-    <div class="lever-card">
-      <div class="lever-rank">
-        <div class="lever-rank-num">5</div>
-        <div class="lever-rank-label">Impact</div>
-      </div>
-      <div class="lever-body">
-        <span class="lever-impact impact-symptom">Symptom of #1</span>
-        <div class="lever-title">Decision-rights are scoped by item complexity, not by case.</div>
-        <div class="lever-collapsible">
-          <div class="lever-collapsible-content">
-            <div class="lever-evidence">Same call, same agent, same order: The handling representative could authorise the Fitbit instantly but not the Pixel. Authority is sliced by item type, not delegated to whoever owns the case. This is real, but the smallest standalone lever. It is largely a symptom of lever #1: if escalation were functional and the specialist joined the existing thread, this authority split wouldn't create the same stall, because the specialist's authority would apply within the same case context.</div>
-          </div>
-        </div>
-        <div class="lever-fix">
-          <span class="lever-fix-label">Fix</span>
-          Either expand front-line authority thresholds for high-value delivery failures, or treat as solved once lever #1 is fixed.
-        </div>
-        <button class="toggle-btn" aria-expanded="false" data-collapsed="Evidence &darr;" data-expanded="Collapse &uarr;">
-          <span class="btn-text">Evidence &darr;</span> <span class="chevron">▼</span>
-        </button>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- THE PATTERN -->
-  <section id="pattern">
-    <p class="section-eyebrow">The Pattern</p>
-    <h2>What this case shows</h2>
-    <p class="section-lead">Six systems touched this order. Each performed within its own boundary. The failure is in what they collectively do not do.</p>
-
-    <p class="pull-quote">"The person holding the whole picture together, unpaid and without tools, is the customer."</p>
+    <p class="pull-quote">"A body at rest with no internal force. Everything that ever moved it came from outside."</p>
 
     <div class="conclusion-block">
-      <h3>This is a system-design finding, not a service complaint.</h3>
-      <p>The carrier flagged and waited. Order Management escalated and waited. The specialist team received and produced nothing. Billing ran its timer. Klarna ran its schedule. The fulfilment system switched carriers without telling anyone. <strong>Each system was operating as designed.</strong></p>
-      <p>The Edinburgh Pixel case, the absence of a specialist team SLA, the undocumented carrier switch, the trade-in policy with no delivery-failure provision; none of these are features of this specific order. They are features of the system. This case is one instance of a set of failure conditions that exist independently of the order number.</p>
-      <p>Bad luck didn't cause this. This system was never built to handle this scenario, and hasn't been fixed despite evidence it keeps recurring.</p>
-      <p><strong>That is the finding this analysis exists to make explicit.</strong></p>
+      <h3>The seat, not the person, is where this failed.</h3>
+      <p>Below a certain value, and inside Remediate mode, the company and the customer want the same thing, and a competent operator simply delivers it. That is why the accessory was fixed in a single call.</p>
+      <p>Above that value and risk threshold, the alignment inverts. Satisfying the customer becomes the operator's locally risky move, because reshipping an asset that is held but not confirmed lost risks paying twice. So the same competent, well-meaning operator denies. The cause is authority the seat was never given.</p>
+      <p>The 32 days are not a slow queue. They are a limbo asset with no owner and no clock. The held unit can only reach a terminal state through carrier operations; the customer-facing seat has no way to reach carrier operations; remediation cannot proceed while the unit is in limbo; and because nothing measures elapsed limbo, nothing escalates. The only forces that ever moved it came from outside the company: a Klarna dispute, a public post.</p>
+      <p><strong>At every fork the correct move existed, and a competent person in the seat could see it. The organisation withheld the authority to make it. That is how a case fixable on day 7 compounds into day 32.</strong></p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <p>Case Debrief: Order GS.XXXX-XXXX-XXXX &middot; External Operations Analysis &middot; 30 June 2026</p>
+      <p>Case Debrief: Order GS.XXXX-XXXX-XXXX &middot; A decision simulation &middot; 11 July 2026</p>
       <p>Prepared for: Google Store complaints, RetailADR, or professional case study use.</p>
     </div>
   </footer>
@@ -1830,7 +1712,7 @@
     });
   });
 
-  // Live elapsed timer — order placed 9 June 2026
+  // Live elapsed timer; order placed 9 June 2026
   (function() {
     const orderDate = new Date('2026-06-09T00:00:00');
 
